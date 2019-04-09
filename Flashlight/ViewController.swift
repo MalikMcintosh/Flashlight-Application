@@ -7,9 +7,23 @@
 //
 
 import UIKit
+extension UIColor {
+    static func random() -> UIColor {
+        return UIColor(red:   .random(in:0...1),
+                       green: .random(in:0...1),
+                       blue:  .random(in:0...1),
+                       alpha: 1.0)
+    }
+}
 
 class ViewController: UIViewController {
-
+    @IBOutlet var View1: UIView!
+    @IBAction func Flashbutton(_ sender: Any) {
+        View1.backgroundColor = UIColor.random()
+       
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
